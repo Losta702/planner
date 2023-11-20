@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.za.planner.ui.update.UpdateFragment">
+
+    <TextView
+        android:id="@+id/text_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="393dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="11dp"
+        android:hint="Date"
+        app:layout_constraintTop_toBottomOf="@+id/text_gallery"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/editTextMustDo"
+        android:layout_width="393dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="15dp"
+        android:hint="Must Do"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <EditText
+        android:id="@+id/editTextAppointments"
+        android:layout_width="393dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="13dp"
+        android:hint="Appointments"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMustDo"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/textToDoList"
+        android:layout_width="86dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:text="To Do List"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAppointments"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="241dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textToDoList" />
+
+    <EditText
+        android:id="@+id/editTextNotes"
+        android:layout_width="393dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="23dp"
+        android:hint="Notes"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTasks"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:id="@+id/buttonInsert"
+        android:layout_width="391dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="23dp"
+        android:text="Insert"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNotes"
+        tools:layout_editor_absoluteX="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
